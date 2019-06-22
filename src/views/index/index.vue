@@ -18,6 +18,30 @@
           <div style="width: 100%;" class="textEnd">{{textEnd}}</div>
         </div>
       </div>
+      <div class="row-box">
+        <div class="row-content content-text-box2">
+          <span style="font-size: 0.427rem;color: #ffffff;">企业愿景</span>
+          <span style="font-size: 0.32rem;color: #ffffff;font-weight: 100;margin: 0.3rem 0;">成为最值得信赖的国际化教育运营服务商</span>
+          <span style="font-size: 0.32rem;color: #ffffff;font-weight: 100;">创造卓越价值</span>
+        </div>
+      </div>
+      <div class="row-box footer-box">
+        <div class="row-h">
+          <div class="row-title"><span class="text-line left-line"></span>企业价值观<span class="text-line right-line"></span></div>
+        </div>
+        <div class="row-content corporate-value-box">
+          <div class="content-col">精进至诚</div>
+          <div class="content-col">专业极致</div>
+          <div class="content-col">拥抱变化</div>
+          <div class="content-col">合作共赢</div>
+        </div>
+        <div class="row-content content-text-box2">
+          <span style="font-size: 0.427rem;color: #ffffff;">人才理念</span>
+          <span style="font-size: 0.32rem;color: #ffffff;font-weight: 100;margin-top: 0.3rem;">菁致教育倡导以人为本，客户第一，</span>
+          <span style="font-size: 0.32rem;color: #ffffff;font-weight: 100;">要求员工具有良好的沟通能力、团队协作能力、</span>
+          <span style="font-size: 0.32rem;color: #ffffff;font-weight: 100;">问题解决能力以及结果导向能力。</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -61,6 +85,7 @@ export default {
 .rows-box .row-box {
   width: 100%;
   display: inline-block;
+  margin-top: 0.3rem;
 }
 .row-box .row-h {
   width: 100%;
@@ -131,7 +156,6 @@ export default {
 }
 .content-row .content-text-box {
   width: calc(100% -  4.707rem);
-  height: 5.067rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -152,5 +176,28 @@ export default {
   margin-top: 0.1rem;
   font-size: 0.333rem;
   color: #b1b1b1;
+}
+.row-box .content-text-box2 {
+  width: 9.36rem;
+  height: 4.267rem;
+  background: url('./img/row_bg.png') no-repeat center;
+  background-size: 100% 100%;
+  margin-top: 0.933rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.row-box .corporate-value-box {
+  width: 9.36rem;
+}
+.corporate-value-box .content-col {
+  width: 4.68rem;
+  float: left;
+  font-size: 0.427rem;
+  color: #fff;
+  padding: 0.6rem 0;
+}
+.footer-box {
+  padding-bottom: 1.2rem;
 }
 </style>
