@@ -2,8 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/views/index/index' // 首页
 import ProjectIntroduction from '@/views/projectIntroduction/index' // 项目介绍
-import Policy from '@/views/policy/index'
-import ConsultAndAdvice from '@/views/consultAndAdvice/index'
+import Policy from '@/views/policy/index' // 政策法规
+import ConsultAndAdvice from '@/views/consultAndAdvice/index' // 咨询建议
+import OperatingServices from '@/views/operatingServices/index' // 运营服务
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -30,6 +31,11 @@ export default new Router({
       path: '/ConsultAndAdvice',
       name: 'ConsultAndAdvice',
       component: ConsultAndAdvice
+    },
+    {
+      path: '/OperatingServices',
+      name: 'OperatingServices',
+      component: OperatingServices
     }
   ]
 })
