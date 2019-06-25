@@ -3,14 +3,14 @@
     <div class="row-box">
       <div class="row-h">请填写您的联系方式</div>
       <div class="form-box">
-        <mt-field label="用户名" placeholder="请输入您的用户名" v-model="fromData.userName"></mt-field>
-        <mt-field label="手机号" placeholder="请输入您的手机号" type="tel" v-model="fromData.userNum"></mt-field>
-        <mt-field label="邮箱" placeholder="请输入您的电子邮箱" type="email" v-model="fromData.email"></mt-field>
-        <mt-field label="公司名称" placeholder="请输入您的公司名称" v-model="fromData.companyName"></mt-field>
-        <mt-field label="职位" placeholder="请输入您的公司职位" v-model="fromData.position"></mt-field>
-        <mt-field label="需求或建议" placeholder="请输入您的需求或建议" type="textarea" rows="4" v-model="fromData.text"></mt-field>
+        <mt-field label="用户名" placeholder="请输入您的用户名" v-model="fromData.userName" :state="rulesData.userName" @change="rulesNull(fromData.userName,'userName')"></mt-field>
+        <mt-field label="手机号" placeholder="请输入您的手机号"  :attr="{ maxlength: 11 }" :state="rulesData.userNum"  type="tel" v-model.number="fromData.userNum" @change="rulesNumber(fromData.userNum,'userNum')"></mt-field>
+        <mt-field label="邮箱" placeholder="请输入您的电子邮箱" type="email" v-model="fromData.email" :state="rulesData.email" @change="rulesEmail(fromData.email,'email')"></mt-field>
+        <mt-field label="公司名称" placeholder="请输入您的公司名称" v-model="fromData.companyName" :state="rulesData.companyName" @change="rulesNull(fromData.companyName,'companyName')"></mt-field>
+        <mt-field label="职位" placeholder="请输入您的公司职位" v-model="fromData.position" :state="rulesData.position" @change="rulesNull(fromData.position,'position')"></mt-field>
+        <mt-field label="需求或建议" placeholder="请输入您的需求或建议" type="textarea" rows="4" v-model="fromData.text" :state="rulesData.text" @change="rulesNull(fromData.text,'text')"></mt-field>
       </div>
-      <div class="submit-btn">提交</div>
+      <div class="submit-btn" @click="submitFrom">提交</div>
     </div>
   </div>
 </template>
@@ -26,11 +26,46 @@ export default {
         companyName: null,
         position: null,
         text: null
+      },
+      rulesData: {
+        userName: null,
+        userNum: null,
+        email: null,
+        companyName: null,
+        position: null,
+        text: null
+      },
+      rules: {
+        tel: /^[1][3,4,5,7,8,9][0-9]{9}$/,
+        regEmail: /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/
       }
     }
   },
   methods: {
-    submitFrom () {}
+    submitFrom () {
+      console.log('提交数据！')
+    },
+    rulesNumber (val, key) {
+      if (this.rules.tel.test(val)) {
+        this.rulesData[key] = 'success'
+      } else {
+        this.rulesData[key] = 'error'
+      }
+    },
+    rulesEmail (val, key) {
+      if (this.rules.regEmail.test(val)) {
+        this.rulesData[key] = 'success'
+      } else {
+        this.rulesData[key] = 'error'
+      }
+    },
+    rulesNull (val, key) {
+      if (val) {
+        this.rulesData[key] = 'success'
+      } else {
+        this.rulesData[key] = 'error'
+      }
+    }
   }
 }
 </script>
@@ -76,6 +111,18 @@ export default {
   color: #ffffff;
 }
 .form-box>>>.mint-field-clear {
+  width: 0.32rem;
+  height: 0.32rem;
+  display: inline-block;
+  opacity: 2;
+  position: absolute;
+  right: 0.6rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 20px;
+}
+.form-box>>>.mint-field-state {
   width: 0.32rem;
   height: 0.32rem;
   display: inline-block;
