@@ -304,6 +304,7 @@ export default {
   border: none;
   width: 100%;
   height: 100%;
+  font-size: 0.16rem;
 }
 .row-projectList .project-text-box {
   flex: 1;
