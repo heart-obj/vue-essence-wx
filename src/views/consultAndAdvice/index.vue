@@ -1,5 +1,6 @@
 <template>
   <div class="box">
+    <header class="hader-box"></header>
     <div class="row-box">
       <div class="row-h">请填写您的联系方式</div>
       <div class="form-box">
@@ -73,6 +74,12 @@ export default {
 .box {
   width: 100%;
 }
+.box  .hader-box {
+  width: 9.36rem;
+  height: 4.267rem;
+  background: #e3cea8;
+  display: inline-block;
+}
 .box .row-box {
   width: 9.4rem;
   display: inline-block;
@@ -134,13 +141,18 @@ export default {
   margin: auto;
 }
 .submit-btn {
-  width: 2.933rem;
-  height: 0.64rem;
+  width: 3.933rem;
+  height: 0.94rem;
   border-radius: 0.64rem;
   color: #ffffff;
-  line-height: 0.64rem;
+  line-height: 0.94rem;
   display: inline-block;
   background: #e3cea8;
   margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.46rem;
+}
+.box>>>.mint-cell-wrapper {
+  background: none;
 }
 </style>

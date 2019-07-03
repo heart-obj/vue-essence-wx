@@ -200,7 +200,7 @@ export default {
           title: '上海莱克顿高中',
           textZH: '一所传承三百一十年教学传统的英式寄宿学校',
           textEnglish: 'a boarding school with 310 years of British tradition',
-          projectImg: ''
+          projectImg: './static/img/lucky_bg.png'
         }
       ]
     }

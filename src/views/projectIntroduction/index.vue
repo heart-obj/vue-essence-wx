@@ -10,7 +10,7 @@
           <div class="content-row">
             <div class="content-row-col" v-for="(item, i) in processData" :key="i">
               <div class="content-row-col-h">{{ item.title }}</div>
-              <div class="content-row-col-tag" ><span v-for="(tag, n) in item.tagArr" :key="n">{{ tag }}</span></div>
+              <div class="content-row-col-tag" v-show="item.tagArr"><span v-for="(tag, n) in item.tagArr" :key="n">{{ tag }}</span></div>
             </div>
           </div>
           <div class="content-row">
@@ -158,10 +158,11 @@ export default {
 }
 .content-row .content-row-col {
   width: 100%;
-  height: 1.493rem;
+  /* height: 1.493rem; */
   text-align: left;
   box-sizing: border-box;
   position: relative;
+  padding: 0.267rem 0 0 0;
 }
 .content-row .content-row-col::after {
   content: '';
@@ -171,7 +172,7 @@ export default {
   background: #e3cea8;
   position: absolute;
   left: 0.813rem;
-  top: 0.2rem;
+  top: 0.7rem;
 }
 .content-row .content-row-col:last-child::after {
   display: none;
