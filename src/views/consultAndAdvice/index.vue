@@ -61,6 +61,7 @@ export default {
       })
         .then(function (response) {
           console.log(response)
+          alert('提交成功！')
         })
         .catch(function (error) {
           console.log(error)
