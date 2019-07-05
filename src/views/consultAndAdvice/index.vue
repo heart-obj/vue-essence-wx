@@ -1,6 +1,5 @@
 <template>
   <div class="box">
-    <header class="hader-box"><img :src="bannerImg" alt="" srcset="" width="100%" height="100%"></header>
     <div class="row-box">
       <div class="row-h">请填写您的联系方式</div>
       <div class="form-box">
@@ -45,7 +44,7 @@ export default {
   },
   methods: {
     submitFrom () {
-      console.log('提交数据！')
+      console.log(this.fromData.userName)
     },
     rulesNumber (val, key) {
       if (this.rules.tel.test(val)) {
@@ -62,7 +61,7 @@ export default {
       }
     },
     rulesNull (val, key) {
-      if (val) {
+      if (val.length > 0) {
         this.rulesData[key] = 'success'
       } else {
         this.rulesData[key] = 'error'
