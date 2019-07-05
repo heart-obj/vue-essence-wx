@@ -49,7 +49,7 @@ export default {
       const axios = require('axios')
 
       // 发送get请求
-      axios.get('/user?ID=12345')
+      axios.get('/api/advice')
         .then(function (response) {
           console.log(response)
         })
