@@ -86,7 +86,7 @@ export default {
       }
     },
     rulesNull (val, key) {
-      if (val.length > 0) {
+      if (val != null && val.length > 0) {
         this.rulesData[key] = 'success'
       } else {
         this.rulesData[key] = 'error'
