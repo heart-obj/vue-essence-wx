@@ -50,7 +50,7 @@ export default {
 
       // 发送get请求
       axios.get('/api/advice', {
-        user: this.fromData.userName,
+        name: this.fromData.userName,
         phone: this.fromData.userNum,
         email: this.fromData.email,
         company: this.fromData.companyName,
