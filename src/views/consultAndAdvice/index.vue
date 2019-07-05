@@ -46,12 +46,16 @@ export default {
     submitFrom () {
       console.log(this.fromData.userName)
 
+      const axios = require('axios')
+
       // 发送get请求
-      this.$http.get('/api/advice').then(function (res) {
-        console.log('请求成功')
-      }, function () {
-        console.log('请求失败处理')
-      })
+      axios.get('/user?ID=12345')
+        .then(function (response) {
+          console.log(response)
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
     },
     rulesNumber (val, key) {
       if (this.rules.tel.test(val)) {

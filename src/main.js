@@ -7,6 +7,7 @@ import 'amfe-flexible/index.js'
 import Mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import axios from 'axios'
+
 Vue.use(Mint)
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios
