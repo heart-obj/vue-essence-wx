@@ -50,7 +50,7 @@ export default {
 
       this.rulesNull(this.fromData.userName, 'userName')
 
-      this.rulesNull(this.fromData.userNum, 'phone')
+      this.rulesNumber(this.fromData.userNum, 'userNum')
 
       // 发送get请求
       axios.get('/api/advice', {
