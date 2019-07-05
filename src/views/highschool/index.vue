@@ -48,29 +48,33 @@ export default {
     return {
       bannerImg: './static/banner/banner3.png',
       titleObj: { // 简介
-        titleName: '0-3岁幼儿托管'
+        titleName: '高中'
       },
       specificationObj: { // 要求
         title: '场地要求',
         modelList: [
           {
-            title: '托育',
+            title: '高中',
             list: [
               {
-                title: '面积',
-                data: '360-500平方米'
+                title: '用地面积',
+                data: '2.7万平方米以上'
               },
               {
-                title: '楼层',
-                data: '3层以下，1层必须有，且面积大于2、3层'
+                title: '建筑面积',
+                data: '1.4万平方米以上'
+              },
+              {
+                title: '室外场地',
+                data: '有体育活动用地和绿化用地'
               },
               {
                 title: '土地性质',
-                data: '工业不可选'
+                data: '教育用地、商业用地'
               },
               {
                 title: '周边环境',
-                data: '无医院，垃圾污水厂，化学工厂等有危险性的设施'
+                data: '不得与集贸市场、医院传染病房、高压变配电所、公共交通枢纽、垃圾及污水处理站等场所毗邻'
               },
               {
                 title: '消防',
@@ -79,14 +83,6 @@ export default {
               {
                 title: '租期',
                 data: '3年以上'
-              },
-              {
-                title: '人口',
-                data: '2公里人口数量18万以上'
-              },
-              {
-                title: '竞品',
-                data: '200米内无竞品'
               }
             ]
           }
@@ -96,7 +92,7 @@ export default {
         title: '筹建流程',
         modelList: [
           {
-            title: '幼托中心单店开设时间表',
+            title: '高中筹建时间表 (1年起）',
             list: [
               {
                 title: '市调期',
@@ -109,21 +105,21 @@ export default {
               },
               {
                 title: '计划期',
-                title2: '2周',
+                title2: '2个月',
                 typeArr: [
-                  '装修计划',
+                  '工程计划',
                   '市场计划（贯穿整个流程）',
                   '招聘计划',
-                  '资金计划'
+                  '重要截点确认'
                 ]
               },
               {
                 title: '筹备期',
-                title2: '2-3个月',
+                title2: '8-12个月',
                 typeArr: [
-                  '工程装修(2-3个月)',
-                  '人员招聘(试运营前一个月到位)',
-                  '教玩具采购(试运营前一周到位)'
+                  '工程报建',
+                  '工程装修 (8-12个月，基于面积及工程特殊性）',
+                  '教玩具采购(试运营前两周到位)'
                 ]
               },
               {
@@ -140,7 +136,7 @@ export default {
                 title2: '工程完工至证件下发',
                 typeArr: [
                   '环境布置',
-                  '半日园试运营',
+                  '试运营',
                   '筹备开业活动'
                 ]
               },

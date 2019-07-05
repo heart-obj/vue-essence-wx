@@ -48,25 +48,29 @@ export default {
     return {
       bannerImg: './static/banner/banner3.png',
       titleObj: { // 简介
-        titleName: '0-3岁幼儿托管'
+        titleName: '3-6岁幼儿园'
       },
       specificationObj: { // 要求
         title: '场地要求',
         modelList: [
           {
-            title: '托育',
+            title: '幼儿园',
             list: [
               {
-                title: '面积',
-                data: '360-500平方米'
+                title: '建筑面积',
+                data: '1500-4000平方米'
+              },
+              {
+                title: '室外场地',
+                data: '有'
               },
               {
                 title: '楼层',
-                data: '3层以下，1层必须有，且面积大于2、3层'
+                data: '独立建筑，3层为佳'
               },
               {
                 title: '土地性质',
-                data: '工业不可选'
+                data: '教育用地、商业用地'
               },
               {
                 title: '周边环境',
@@ -79,14 +83,6 @@ export default {
               {
                 title: '租期',
                 data: '3年以上'
-              },
-              {
-                title: '人口',
-                data: '2公里人口数量18万以上'
-              },
-              {
-                title: '竞品',
-                data: '200米内无竞品'
               }
             ]
           }
@@ -96,7 +92,7 @@ export default {
         title: '筹建流程',
         modelList: [
           {
-            title: '幼托中心单店开设时间表',
+            title: '幼儿园筹建时间表',
             list: [
               {
                 title: '市调期',
@@ -111,24 +107,25 @@ export default {
                 title: '计划期',
                 title2: '2周',
                 typeArr: [
-                  '装修计划',
+                  '工程计划',
                   '市场计划（贯穿整个流程）',
                   '招聘计划',
-                  '资金计划'
+                  '重要截点确认'
                 ]
               },
               {
                 title: '筹备期',
-                title2: '2-3个月',
+                title2: '5-8个月',
                 typeArr: [
-                  '工程装修(2-3个月)',
-                  '人员招聘(试运营前一个月到位)',
-                  '教玩具采购(试运营前一周到位)'
+                  '工程报建 (1周，基于资料是否齐全)',
+                  '硬装工程 (4-6个月，基于面积及工程特殊性)',
+                  '软装工程(1-2个月)',
+                  '教玩具采购(试运营前两周到位)'
                 ]
               },
               {
                 title: '申报期',
-                title2: '2-3个月',
+                title2: '3-6个月',
                 typeArr: [
                   '资质文件准备(与工程同步进行)',
                   '窗口材料递交',

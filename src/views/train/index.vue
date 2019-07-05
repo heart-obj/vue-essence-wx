@@ -19,23 +19,6 @@
               </div>
             </div>
           </div>
-          <div class="content-row">
-            <div class="content-title">{{ flowData.title }}</div>
-            <div class="content-module" v-for="(item, i) in flowData.modelList" :key="i">
-              <div class="module-h">{{ item.title }}</div>
-              <div class="module-rows">
-                <div class="module-rows-row" v-for="(item2, n) in item.list" :key="n">
-                  <div class="module-row-h">
-                    <span class="bold-span">{{ item2.title }}</span>
-                    {{item2.title2}}
-                  </div>
-                  <div class="module-content">
-                    <span class="module-content-col" v-for="(item3, o) in item2.typeArr" :key="o">{{ item3 }}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -48,29 +31,29 @@ export default {
     return {
       bannerImg: './static/banner/banner3.png',
       titleObj: { // 简介
-        titleName: '0-3岁幼儿托管'
+        titleName: '培训机构'
       },
       specificationObj: { // 要求
         title: '场地要求',
         modelList: [
           {
-            title: '托育',
+            title: '培训',
             list: [
               {
                 title: '面积',
-                data: '360-500平方米'
+                data: '200-300平方米'
               },
               {
                 title: '楼层',
-                data: '3层以下，1层必须有，且面积大于2、3层'
+                data: '不限'
               },
               {
-                title: '土地性质',
-                data: '工业不可选'
+                title: '交通',
+                data: '地铁站10分钟步行以内'
               },
               {
                 title: '周边环境',
-                data: '无医院，垃圾污水厂，化学工厂等有危险性的设施'
+                data: '环境优雅'
               },
               {
                 title: '消防',
@@ -79,75 +62,6 @@ export default {
               {
                 title: '租期',
                 data: '3年以上'
-              },
-              {
-                title: '人口',
-                data: '2公里人口数量18万以上'
-              },
-              {
-                title: '竞品',
-                data: '200米内无竞品'
-              }
-            ]
-          }
-        ]
-      },
-      flowData: { // 流程
-        title: '筹建流程',
-        modelList: [
-          {
-            title: '幼托中心单店开设时间表',
-            list: [
-              {
-                title: '市调期',
-                title2: '2周-1个月',
-                typeArr: [
-                  '选址',
-                  '市场调查',
-                  '可行性报告'
-                ]
-              },
-              {
-                title: '计划期',
-                title2: '2周',
-                typeArr: [
-                  '装修计划',
-                  '市场计划（贯穿整个流程）',
-                  '招聘计划',
-                  '资金计划'
-                ]
-              },
-              {
-                title: '筹备期',
-                title2: '2-3个月',
-                typeArr: [
-                  '工程装修(2-3个月)',
-                  '人员招聘(试运营前一个月到位)',
-                  '教玩具采购(试运营前一周到位)'
-                ]
-              },
-              {
-                title: '申报期',
-                title2: '2-3个月',
-                typeArr: [
-                  '资质文件准备(与工程同步进行)',
-                  '窗口材料递交',
-                  '员工培训(试运营前一个月内)'
-                ]
-              },
-              {
-                title: '试运营',
-                title2: '工程完工至证件下发',
-                typeArr: [
-                  '环境布置',
-                  '半日园试运营',
-                  '筹备开业活动'
-                ]
-              },
-              {
-                title: '正式开业',
-                title2: '开业典礼',
-                typeArr: []
               }
             ]
           }

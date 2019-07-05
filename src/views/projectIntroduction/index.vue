@@ -14,7 +14,7 @@
             </div>
           </div>
           <div class="content-row">
-            <div class="content-row-list" v-for="(item, i) in projectArr" :key="i" @click="detailFunc">
+            <div class="content-row-list" v-for="(item, i) in projectArr" :key="i" @click="detailFunc(i)">
               <div class="row-list-h">{{ item.title }}</div>
             </div>
           </div>
@@ -61,29 +61,64 @@ export default {
       ],
       projectArr: [
         {
-          title: '0-3岁幼儿托管',
+          title: '0-3岁幼儿托管'
         },
         {
-          title: '3-6岁幼儿园',
+          title: '3-6岁幼儿园'
         },
         {
-          title: 'K9',
+          title: 'K9'
         },
         {
-          title: '高中',
+          title: '高中'
         },
         {
-          title: '培训机构',
+          title: '培训机构'
         }
       ]
     }
   },
   methods: {
-    detailFunc () {
-      this.$router.push({
-        name: 'OperatingServices',
-        query: ''
-      })
+    detailFunc (i) {
+      switch (i) {
+        case 0:
+          this.$router.push({
+            name: 'OperatingServices',
+            query: ''
+          })
+          break
+
+        case 1:
+          this.$router.push({
+            name: 'Kindergarten',
+            query: ''
+          })
+          break
+
+        case 2:
+          this.$router.push({
+            name: 'K9',
+            query: ''
+          })
+          break
+
+        case 3:
+          this.$router.push({
+            name: 'Highschool',
+            query: ''
+          })
+          break
+
+        case 4:
+          this.$router.push({
+            name: 'Train',
+            query: ''
+          })
+          break
+
+        default:
+          break
+      }
     }
   }
 }
