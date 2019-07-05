@@ -45,6 +45,13 @@ export default {
   methods: {
     submitFrom () {
       console.log(this.fromData.userName)
+
+      // 发送get请求
+      this.$http.get('/api/advice').then(function (res) {
+        console.log('请求成功')
+      }, function () {
+        console.log('请求失败处理')
+      })
     },
     rulesNumber (val, key) {
       if (this.rules.tel.test(val)) {
