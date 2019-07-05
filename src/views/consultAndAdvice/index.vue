@@ -49,7 +49,14 @@ export default {
       const axios = require('axios')
 
       // 发送get请求
-      axios.get('/api/advice')
+      axios.get('/api/advice', {
+        user: this.fromData.userName,
+        phone: this.fromData.userNum,
+        email: this.fromData.email,
+        company: this.fromData.companyName,
+        job: this.fromData.position,
+        advice: this.fromData.text
+      })
         .then(function (response) {
           console.log(response)
         })
