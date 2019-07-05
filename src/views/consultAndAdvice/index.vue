@@ -48,6 +48,10 @@ export default {
 
       const axios = require('axios')
 
+      this.rulesNull(this.fromData.userName, 'userName')
+
+      this.rulesNull(this.fromData.userNum, 'phone')
+
       // 发送get请求
       axios.get('/api/advice', {
         params: {
