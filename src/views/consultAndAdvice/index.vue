@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <header class="hader-box"></header>
+    <header class="hader-box"><img :src="bannerImg" alt="" srcset="" width="100%" height="100%"></header>
     <div class="row-box">
       <div class="row-h">请填写您的联系方式</div>
       <div class="form-box">
@@ -20,6 +20,7 @@ export default {
   name: 'ConsultAndAdvice', // 咨询建议
   data () {
     return {
+      bannerImg: '',
       fromData: {
         userName: null,
         userNum: null,

@@ -1,21 +1,28 @@
 <template>
   <div class="box">
-    <header class="hader-box"></header>
+    <header class="hader-box"><img :src="bannerImg" alt="" srcset="" width="100%" height="100%"></header>
     <div class="rows-box">
       <div class="row-box">
         <div class="row-h">
-          <div class="row-title"><span class="text-line left-line"></span>企业简介<span class="text-line right-line"></span></div>
+          <div class="row-title-h">企业简介</div>
         </div>
         <div class="row-content">
           <div class="content-row">
             <div class="content-img-box">
-              <img src="./img/title_img.png" alt="" class="content-img" hspace="5" vspace="5" align="left">
+              <img :src="introduceText[0].img" alt="" class="content-img" hspace="5" vspace="5" align="left">
             </div>
             <div class="content-text-box">
-              <div v-for="(item, i) in introduceText" :key="i" :style="{'margin-left': + (-0.8 + (0.1 * i)) +'rem','width': + ( 5.6 - (0.1 * i)) +'rem'}">{{ item }}</div>
+              <div>{{ introduceText[0].text }}</div>
             </div>
           </div>
-          <div style="width: 100%;" class="textEnd">{{textEnd}}</div>
+          <div class="content-row2">
+            <div class="content-text-box">
+              <div>{{ introduceText[1].text }}</div>
+            </div>
+            <div class="content-img-box">
+              <img :src="introduceText[1].img" alt="" class="content-img2" hspace="5" vspace="5" align="left">
+            </div>
+          </div>
         </div>
       </div>
       <div class="row-box">
@@ -50,20 +57,17 @@ export default {
   name: 'Index', // 首页
   data () {
     return {
-      introduceText: [
-        '菁致教育科技（上海）有限公司',
-        '是一家专注教育领域的运营服务',
-        '机构，公司拥有美国、英国、加',
-        '拿大等多早教、托育、幼儿园、',
-        'K15及非学历教育家教育合作品',
-        '牌，为等实体办学机构解决经',
-        '营问题并创造菁致教育全面布',
-        '局现代教育领域，通过搭建课',
-        '程开发、运营管理、国际交',
-        '流平台等，在全球范围内整',
-        '合多渠道资源，全面提升合'
+      introduceText: [ // 简介（如需要修改内容请按照此排列文本内容）
+        {
+          text: '菁致教育科技（上海）有限公司是一家专注教育领域的运营服务机构，公司拥有美国、英国、加拿大等多家教育合作品牌，为早教、托育、幼儿园、K15及非学历教育等实体办学机构解决经营问题并创造菁致教育全面布局现代教育领域，',
+          img: './static/indexImg/title_img.png'
+        },
+        {
+          text: '通过搭建课程开发、运营管理、国际交流平台等，在全球范围内整合多渠道资源，全面提升合作伙伴的教育运营管理能力及资源使用效率，打造教育生态闭环，助力教育创新升级，提供极致专业的教育领域运营服务，打造全球卓越教育品牌。',
+          img: './static/indexImg/title_img2.png'
+        }
       ],
-      textEnd: '作伙伴的教育运营管理能力及资源使用效率，打造教育生态闭环，助力教育创新升级，提供极致专业的教育领域运营服务，打造全球卓越教育品牌。'
+      bannerImg: './static/banner/banner1.png'
     }
   }
 }
@@ -90,6 +94,11 @@ export default {
 .row-box .row-h {
   width: 100%;
   display: inline-block;
+}
+.row-h .row-title-h {
+  font-size: 0.427rem;
+  color: #bababa;
+  font-family: '华文中宋';
 }
 .row-h .row-title {
   display: inline-block;
@@ -136,7 +145,7 @@ export default {
 .row-title .right-line {
   right: 0;
 }
-.row-box .row-content .content-row {
+.row-box .row-content .content-row,.content-row2 {
   width: 100%;
   display: inline-block;
   text-align: left;
@@ -144,6 +153,21 @@ export default {
   font-size: 0.333rem;
   color: #b1b1b1;
   display: flex;
+  position: relative;
+}
+.row-box .row-content .content-row::after {
+  display: inline-block;
+  content: '';
+  width: 8.267rem;
+  height: 2.4rem;
+  background: #414141;
+  position: absolute;
+  right: 0;
+  bottom: -1.1rem;
+  z-index: 1;
+}
+.row-box .row-content .content-row2 {
+  margin-top: 1.6rem;
 }
 .content-row .content-img-box {
   width: 4.707rem;
@@ -153,29 +177,26 @@ export default {
   width: 100%;
   height: 100%;
   margin: 0;
+  position: relative;
+  z-index: 2;
 }
 .content-row .content-text-box {
   width: calc(100% -  4.707rem);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
 }
-.content-text-box>div {
-  width: 5.6rem;
-  text-align: left;
+.content-row2 .content-img-box {
+  width: 3.2rem;
+  height: 5.067rem;
 }
-.content-text-box>div:nth-child(1) {
-  width: 5.6rem;
-  margin-left: -0.947rem;
-  text-align: left
-}
-.row-content .textEnd {
-  width: 100%;
-  display: inline-block;
-  text-align: left;
-  margin-top: 0.1rem;
-  font-size: 0.333rem;
-  color: #b1b1b1;
+.content-row2 .content-text-box {
+  width: calc(100% -  3.3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .row-box .content-text-box2 {
   width: 9.36rem;

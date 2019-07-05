@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <header class="hader-box"></header>
+    <header class="hader-box"><img :src="bannerImg" alt="" srcset="" width="100%" height="100%"></header>
     <div class="rows-box">
       <div class="row-box">
         <div class="row-h">
@@ -30,6 +30,7 @@ export default {
   name: 'ProjectIntroduction', // 项目简介
   data () {
     return {
+      bannerImg: './static/banner/banner2.png',
       processData: [
         {
           title: '合作意向沟通',
