@@ -16,8 +16,6 @@
           <div class="content-row">
             <div class="content-row-list" v-for="(item, i) in projectArr" :key="i" @click="detailFunc">
               <div class="row-list-h">{{ item.title }}</div>
-              <div class="row-list-title">{{ item.title2 }}</div>
-              <div class="row-list-text">{{ item.text }}</div>
             </div>
           </div>
         </div>
@@ -64,13 +62,18 @@ export default {
       projectArr: [
         {
           title: '0-3岁幼儿托管',
-          title2: '2020年同等学力申硕辅导班预报名开始',
-          text: '教师要耐得住寂寞、清贫、教师要守住这片净土，你为什么选择教师这个行业?参加教师招考进行教师队伍你的动机是什么?你觉得'
         },
         {
           title: '3-6岁幼儿园',
-          title2: '2020年同等学力申硕辅导班预报名开始',
-          text: '教师要耐得住寂寞、清贫、教师要守住这片净土，你为什么选择教师这个行业?参加教师招考进行教师队伍你的动机是什么?你觉得'
+        },
+        {
+          title: 'K9',
+        },
+        {
+          title: '高中',
+        },
+        {
+          title: '培训机构',
         }
       ]
     }

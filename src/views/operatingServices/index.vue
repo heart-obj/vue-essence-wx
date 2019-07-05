@@ -7,18 +7,6 @@
           <div class="content-row">
             <div class="content-row-list">
               <div class="row-list-h">{{ titleObj.titleName }}</div>
-              <div class="row-list-title">{{ titleObj.titleName2 }}</div>
-              <div class="row-list-text">{{ titleObj.text }}</div>
-            </div>
-          </div>
-          <div class="content-row">
-            <div class="row-projectList" v-for="(item, i) in projectData" :key="i" @click="queryProjectDetail">
-              <div class="project-img"><img :src="item.projectImg" alt="图片加载中。。。" srcset=""></div>
-              <div class="project-text-box">
-                <div class="project-h">{{ item.title }}</div>
-                <div class="project-text">{{ item.textEnglish }}</div>
-                <div class="project-text">{{ item.textZH }}</div>
-              </div>
             </div>
           </div>
           <div class="content-row">
@@ -60,9 +48,7 @@ export default {
     return {
       bannerImg: './static/banner/banner3.png',
       titleObj: { // 简介
-        titleName: '0-3岁幼儿托管',
-        titleName2: '2020年同等学力申硕辅导班预报名开始',
-        text: '教师要耐得住寂寞、清贫、教师要守住这片净土，你为什么选择教师这个行业?参加教师招考进行教师队伍你的动机是什么？你觉得教师的职责是什么呢？'
+        titleName: '0-3岁幼儿托管'
       },
       specificationObj: { // 要求
         title: '场地要求',
@@ -99,39 +85,6 @@ export default {
                 data: '200米内无竞品'
               }
             ]
-          },
-          {
-            title: '幼儿园',
-            list: [
-              {
-                title: '面积',
-                data: '1500 - 4000平方米'
-              },
-              {
-                title: '室外场地',
-                data: '有'
-              },
-              {
-                title: '楼层',
-                data: '独立建筑，3层为佳'
-              },
-              {
-                title: '土地性质',
-                data: '教育用地、商业用地'
-              },
-              {
-                title: '周边环境',
-                data: '无医院，垃圾污水厂，化学工厂等有危险性的设施'
-              },
-              {
-                title: '租期',
-                data: '3年及以上'
-              },
-              {
-                title: '消防',
-                data: '合格'
-              }
-            ]
           }
         ]
       },
@@ -139,7 +92,7 @@ export default {
         title: '筹建流程',
         modelList: [
           {
-            title: '小初时间表',
+            title: '幼托中心单店开设时间表',
             list: [
               {
                 title: '市调期',
@@ -152,58 +105,50 @@ export default {
               },
               {
                 title: '计划期',
-                title2: '2个月',
+                title2: '2周',
                 typeArr: [
-                  '工程计划',
+                  '装修计划',
                   '市场计划（贯穿整个流程）',
                   '招聘计划',
-                  '重要节点确认'
+                  '资金计划'
                 ]
               },
               {
                 title: '筹备期',
-                title2: '8-12个月',
+                title2: '2-3个月',
                 typeArr: [
-                  '工程报建',
-                  '工程装修（8-12个月，基于面基及工程特殊性）',
-                  '教玩具采购'
+                  '工程装修(2-3个月)',
+                  '人员招聘(试运营前一个月到位)',
+                  '教玩具采购(试运营前一周到位)'
                 ]
               },
               {
                 title: '申报期',
-                title2: '3-6个月',
+                title2: '2-3个月',
                 typeArr: [
-                  '资质文件准备（与工程同步进行）',
+                  '资质文件准备(与工程同步进行)',
                   '窗口材料递交',
-                  '员工培训（试运营前一个月内）'
+                  '员工培训(试运营前一个月内)'
                 ]
               },
               {
                 title: '试运营',
-                title2: '3-6个月',
+                title2: '工程完工至证件下发',
                 typeArr: [
                   '环境布置',
-                  '试运营',
+                  '半日园试运营',
                   '筹备开业活动'
                 ]
               },
               {
                 title: '正式开业',
-                title2: '',
+                title2: '开业典礼',
                 typeArr: []
               }
             ]
           }
         ]
-      },
-      projectData: [ // 项目列表
-        {
-          title: '上海莱克顿高中',
-          textZH: '一所传承三百一十年教学传统的英式寄宿学校',
-          textEnglish: 'a boarding school with 310 years of British tradition',
-          projectImg: './static/img/lucky_bg.png'
-        }
-      ]
+      }
     }
   },
   // 数据初始化

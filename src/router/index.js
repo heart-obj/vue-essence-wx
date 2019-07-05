@@ -8,8 +8,8 @@ import OperatingServices from '@/views/operatingServices/index' // 运营服务
 import ProjectDetail from '@/views/projectDetail/index' // 项目详情介绍
 Vue.use(Router)
 export default new Router({
-   mode: 'history',
-   routes: [
+  mode: 'history',
+  routes: [
     {
       path: '/',
       redirect: 'Index'
