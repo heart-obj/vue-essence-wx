@@ -67,13 +67,13 @@ export default {
           title: '3-6岁幼儿园'
         },
         {
-          title: 'K9'
+          title: '九年制义务教育'
         },
         {
           title: '高中'
         },
         {
-          title: '培训机构'
+          title: '非学历培训'
         }
       ]
     }

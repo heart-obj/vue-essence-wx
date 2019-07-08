@@ -92,7 +92,7 @@ export default {
         title: '筹建流程',
         modelList: [
           {
-            title: '小学及初中筹建时间表 (1年起)',
+            title: '小学及初中筹建时间表',
             list: [
               {
                 title: '市调期',
